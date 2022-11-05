@@ -7,7 +7,7 @@
   
     padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.25);
-    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+     /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -20,17 +20,19 @@
     justify-content: flex-start;
     align-items: center;
   
-    img {
+    
+  }.app__navbar-logo img {
       width: 90px;
       height: 20px;
   
-      @media screen and (min-width: 2000px) {
-        width: 180px;
-        height: 40px;
-      }
+     
     }
-  }
-  
+   @media screen and (min-width: 2000px) {
+        .app__navbar-logo{
+          width: 180px;
+        height: 40px;
+        } 
+      }
   .app__navbar-links {
     flex: 1;
     display: flex;
@@ -39,22 +41,18 @@
   
     list-style: none;
   
-    li {
+    
+  
+    
+  }.app__navbar-links li {
       margin: 0 1rem;
       cursor: pointer;
   
       flex-direction: column;
   
-      div {
-        width: 5px;
-        height: 5px;
-        background: transparent;
-        border-radius: 50%;
-  
-        margin-bottom: 5px;
-      }
-  
-      a {
+ 
+      
+    }.app__navbar-links   a {
         color: var(--gray-color);
         text-decoration: none;
         flex-direction: column;
@@ -64,23 +62,29 @@
   
         transition: all 0.3s ease-in-out;
   
-        &:hover {
+        
+      }
+  .app__navbar-links:hover div{
+         
+          background: var(--secondary-color);
+        
+      }
+  @media screen and (max-width: 900px) {
+      .app__navbar-links {
+        display: none;
+      } 
+    }
+  .app__navbar-links   a:hover {
           color: var(--secondary-color);
         }
+  .app__navbar-links  div {
+        width: 5px;
+        height: 5px;
+        background: transparent;
+        border-radius: 50%;
+  
+        margin-bottom: 5px;
       }
-  
-      &:hover {
-        div {
-          background: var(--secondary-color);
-        }
-      }
-    }
-  
-    @media screen and (max-width: 900px) {
-      display: none;
-    }
-  }
-  
   .app__navbar-menu {
     width: 35px;
     height: 35px;
@@ -93,13 +97,10 @@
     background-color: var(--secondary-color);
   
   
-    svg {
-      width: 70%;
-      height: 70%;
-      color: var(--white-color);
-    }
-  
-    div {
+   
+  }
+
+.app__navbar-menu div {
       position: fixed;
       top: 0;
       bottom: 0;
@@ -124,14 +125,31 @@
       /* top box shadow */
       box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
   
-      svg {
+      
+  
+  
+     
+    }
+
+ @media screen and (min-width: 900px) {
+      .app__navbar-menu {
+        display: none;
+      } 
+    }
+
+ @media screen and (min-width: 900px) {
+        .app__navbar-menu {
+          display: none;
+        } 
+      }
+.app__navbar-menu div svg {
         width: 35px;
         height: 35px;
         color: var(--secondary-color);
         margin: 0.5rem 1rem;
       }
-  
-      ul {
+
+      .app__navbar-menu div  ul {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -143,10 +161,16 @@
         align-items: flex-start;
         flex-direction: column;
   
-        li {
+       
+      }
+
+ .app__navbar-menu div li {
           margin: 1rem;
   
-          a {
+          
+        }
+
+.app__navbar-menu div li  a {
             color: var(--gray-color);
             text-decoration: none;
             font-size: 1rem;
@@ -155,20 +179,17 @@
   
             transition: all 0.3s ease-in-out;
   
-            &:hover {
+            
+          }
+
+.app__navbar-menu div li  a:hover {
               color: var(--secondary-color);
             }
-          }
-        }
-      }
-  
-      @media screen and (min-width: 900px) {
-        display: none;
-      }
+
+
+
+   .app__navbar-menu svg {
+      width: 70%;
+      height: 70%;
+      color: var(--white-color);
     }
-  
-    @media screen and (min-width: 900px) {
-      display: none;
-    }
-  }
-  

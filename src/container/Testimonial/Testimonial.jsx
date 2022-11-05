@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../Wrapper';
 import { urlFor, client } from '../../client';
-import './Testimonial.scss';
+import './Testimonial.css';
 
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

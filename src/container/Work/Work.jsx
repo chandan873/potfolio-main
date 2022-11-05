@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { AppWrap, MotionWrap } from '../../Wrapper';
 
-import './Work.scss';
+import './Work.css';
 
 const WorkData=[
   {

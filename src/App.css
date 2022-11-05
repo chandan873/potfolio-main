@@ -45,12 +45,14 @@
     justify-content: flex-end;
     align-items: flex-end;
   
-    p {
+    
+  }
+  .copyright p {
       text-transform: uppercase;
       color: var(--black-color);
     }
-  }
-  
+
+
   .head-text {
     font-size: 2.75rem;
     font-weight: 800;
@@ -58,19 +60,25 @@
     color: var(--black-color);
     text-transform: capitalize;
   
-    span {
+
+  }
+     .head-text span {
       color: var(--secondary-color);
     }
   
     @media screen and (min-width: 2000px) {
-      font-size: 4rem;
+      .head-text{
+        font-size: 4rem;
+      } 
     }
   
     @media screen and (max-width: 450px) {
-      font-size: 2rem;
+      .head-text{
+        font-size: 2rem;
+      } 
     }
-  }
-  
+
+
   .p-text {
     font-size: 0.8rem;
     text-align: left;
@@ -104,8 +112,11 @@
     flex-direction: column;
   
     padding: 1rem;
+
+    }
   
-    div {
+    
+   .app__social div {
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -119,35 +130,46 @@
   
       transition: all 0.3s ease-in-out;
   
-      svg {
+     
+     
+  
+        
+      }
+
+ @media screen and (min-width: 2000px) {
+        .app__social div svg{
+    width: 30px;
+    height: 30px;
+  }
+        .app__social div{
+          height: 70px;
+  width: 70px;
+        margin: 0.5rem 0;
+        }  
+      }
+   .app__social div svg {
         width: 15px;
         height: 15px;
         color: var(--gray-color);
       }
   
-      &:hover {
+      .app__social :hover {
         background-color: var(--secondary-color);
         border-color: var(--secondary-color);
   
-        svg {
-          color: var(--white-color);
-        }
+       
       }
-  
-      @media screen and (min-width: 2000px) {
-        width: 70px;
-        height: 70px;
-  
-        margin: 0.5rem 0;
-  
-        svg {
-          width: 30px;
-          height: 30px;
-        }
+
+      .app__social :hover svg {
+        color: var(--white-color);
+       
       }
-    }
-  }
-  
+    
+
+
+
+
+
   .app__navigation {
     display: flex;
     justify-content: center;
@@ -156,7 +178,8 @@
   
     padding: 1rem;
   
-    .app__navigation-dot {
+    
+  }.app__navigation-dot {
       width: 10px;
       height: 10px;
       border-radius: 50%;
@@ -165,17 +188,19 @@
   
       transition: background-color 0.2s ease-in-out;
   
-      &:hover {
+      
+  
+     
+    } @media screen and (min-width: 2000px) {
+        .app__navigation-dot{
+         width: 20px;
+        height: 20px; 
+        } 
+      }
+  .app__navigation-dot:hover {
         background-color: var(--secondary-color);
       }
-  
-      @media screen and (min-width: 2000px) {
-        width: 20px;
-        height: 20px;
-      }
-    }
-  }
-  
+
   @media screen and (max-width: 500px) {
     .app__navigation,
     .app__social {

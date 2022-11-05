@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
 import { AppWrap, MotionWrap } from '../../Wrapper';
 import { urlFor, client } from '../../client';
-import './Skills.scss';
+import './Skills.css';
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
