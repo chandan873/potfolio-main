@@ -12,14 +12,18 @@ const WorkData=[
     titile:"song app",
     img:'https://images.unsplash.com/photo-1519619091416-f5d7e5200702?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
     dsc:"song app",
-    tags:"Web App"
+    tags:"Web App",
+    projectLink:"https://lyriks-song.netlify.app",
+    githubLink:"https://github.com/chandan873/song_app.git"
   },
   {
     id:2,
     titile:"dashboard ui",
     img:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
     dsc:"dashboard ui",
-    tags:"Web App"
+    tags:"Web App",
+    projectLink:"https://dsahboard-ui-react.netlify.app",
+    githubLink:"https://github.com/chandan873/dashboard.git"
   }
 ]
 
@@ -79,7 +83,7 @@ const Work = () => {
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
                 className="app__work-hover app__flex"
               >
-                <a href="" target="_blank" rel="noreferrer">
+                <a href={WorkData.projectLink} target="_blank" rel="noreferrer">
 
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
@@ -90,7 +94,7 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href="" target="_blank" rel="noreferrer">
+                <a href={WorkData.githubLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.90] }}
